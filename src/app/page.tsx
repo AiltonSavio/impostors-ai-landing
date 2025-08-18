@@ -7,6 +7,22 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="bg-composite bg-repeat min-h-screen font-pixel text-primary-content bg-[#0a1219]">
+      {/* NAVBAR */}
+      <nav className="sticky text-sm sm:text-base text-center top-0 z-50 bg-secondary py-2 px-5 flex justify-center items-center shadow-md">
+        <span>
+          We’re thrilled to share that Impostors AI won the{" "}
+          <a
+            href="https://devfolio.co/projects/impostorsai-abd1"
+            className="link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Safe Agentathon
+          </a>
+          ! 🎉
+        </span>
+      </nav>
+
       {/* HERO SECTION */}
       <section className="relative">
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -14,7 +30,7 @@ export default function Home() {
         </div>
 
         {/* TITLE + BUTTONS */}
-        <div className="flex flex-col items-center w-full pt-10 md:pt-16 relative z-10">
+        <div className="flex flex-col items-center w-full pt-5 md:pt-12 relative z-10">
           <div className="flex items-center gap-1 lg:mb-4">
             <Image
               src="/favicon.png"
@@ -27,9 +43,9 @@ export default function Home() {
               <span>Impostors AI</span>
             </h1>
           </div>
-          <p className="text-lg sm:text-2xl lg:text-3xl mb-6">
-            AI-Powered Social Deduction Game
-          </p>
+          <h2 className="text-xl sm:text-3xl lg:text-4xl mb-6">
+            The First AI Social Deduction Game
+          </h2>
           <div className="flex gap-4 sm:gap-9 items-center justify-center">
             <a
               href="https://app.impostorsai.xyz"
@@ -51,56 +67,56 @@ export default function Home() {
         </div>
 
         {/* COUNCIL IMAGE + ABOUT */}
-        <div className="relative w-full flex justify-center items-center -mt-12 sm:-mt-28 md:-mt-40 min-[930px]:-mt-52 z-0">
-          <Image
-            src="/images/hero-council-table.png"
-            alt="Impostors AI Council"
-            width={1024}
-            height={768}
-            priority
-            className="hidden md:block"
-          />
+        <div className="relative w-full flex justify-center items-center mt-12 z-0">
+          <div className="flex flex-col">
+            <Image
+              src="/images/hero-council-table3.png"
+              alt="Impostors AI Council"
+              width={1024}
+              height={435}
+              priority
+              className="w-full"
+            />
 
-          {/* Small screen image (<768px) */}
-          <Image
-            src="/images/hero-council-table-md.png"
-            alt="Impostors AI Council"
-            width={768}
-            height={576}
-            priority
-            className="block md:hidden"
-          />
+            <Image
+              src="/images/about-section.png"
+              alt="Impostors AI About Section"
+              width={1024}
+              height={435}
+              priority
+              className="-mt-2 hidden lg:block mx-auto"
+            />
+          </div>
 
           {/* ABOUT OVER TABLE */}
-          <section id="about" className="absolute top-[58%] w-full px-5 z-10">
+          <section
+            id="about"
+            className="absolute top-[70%] sm:top-[80%] lg:top-[50%] lg:w-full px-5 mx-2 sm:mx-28 md:mx-44 lg:mx-12 z-10"
+          >
             <div className="flex justify-center text-center">
               <div className="rounded-xl shadow-xl">
                 <h2 className="text-[26px] min-[425px]:text-4xl sm:text-5xl font-bold mt-3 sm:mt-0 text-primary">
                   About
                 </h2>
 
-                <div className="flex flex-col items-center sm:w-1/2 mt-4 mx-auto md:w-auto md:flex-row md:mt-9 min-[930px]:mt-20 md:max-w-[914px]">
-                  <div className="md:max-w-[312px] md:mr-7">
-                    <h3 className="font-bold text-2xl mt-5">
-                      AI-Driven Strategy
-                    </h3>
-                    <p className="text-xs min-[930px]:text-sm md:px-5 md:mt-7">
+                <div className="flex flex-col items-center mx-auto lg:flex-row mt-8 md:mt-14 lg:mt-28 lg:w-[950px]">
+                  <div className="lg:max-w-[280px] lg:mr-7">
+                    <h3 className="font-bold text-2xl">AI-Driven Strategy</h3>
+                    <p className="text-xs min-[930px]:text-sm lg:px-5">
                       10 AI agents strategize, but one is sabotaging. Players
                       must analyze conversations & vote out the traitor.
                     </p>
                   </div>
-                  <div className="md:w-[265px] md:mr-7">
-                    <h3 className="font-bold text-2xl mt-5 md:mt-0">
-                      On-Chain Governance
-                    </h3>
+                  <div className="lg:w-[500px]">
+                    <h3 className="font-bold text-2xl">On-Chain Governance</h3>
                     <p className="text-xs min-[930px]:text-sm min-[930px]:px-5">
                       Everything runs fully on-chain, ensuring fair outcomes and
                       tamper-proof voting mechanics.
                     </p>
                   </div>
-                  <div className="md:max-w-[312px]">
-                    <h3 className="font-bold text-2xl mt-5">Scalable Themes</h3>
-                    <p className="text-xs min-[930px]:text-sm md:px-5 md:mt-7">
+                  <div className="lg:max-w-[300px] lg:ml-8">
+                    <h3 className="font-bold text-2xl">Scalable Themes</h3>
+                    <p className="text-xs min-[930px]:text-sm md:px-5 ">
                       Medieval kingdom? Futuristic colony? The system supports
                       infinite AI deception scenarios and expansions.
                     </p>
@@ -114,12 +130,9 @@ export default function Home() {
 
       {/* VIDEO DEMO SECTION */}
       <section id="video-demo">
-        <div className="max-w-5xl mx-auto px-4 mt-[294px] min-[500px]:mt-56 sm:mt-48 md:mt-0">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center text-primary">
-            Demo
-          </h2>
+        <div className="max-w-5xl mx-auto px-5 mt-[360px] min-[490px]:mt-[350px] sm:mt-[350px] lg:mt-12">
           <div className="flex justify-center">
-            <PixelFrame className="pixel-frame w-full max-w-[700px]" blue>
+            <PixelFrame className="pixel-frame w-full max-w-[850px]" blue>
               <div
                 className="relative w-full"
                 style={{ paddingBottom: "56.25%" }}
@@ -139,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* AGENTS SECTION */}
-      <section id="agents" className="py-10 md:py-20">
+      <section id="agents" className="py-10 md:pb-10 md:pt-20">
         <div className="max-w-6xl mx-auto px-5">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-center text-primary">
             Meet the Agents
@@ -181,11 +194,11 @@ export default function Home() {
               <div key={agent.name} className="agent-wrapper">
                 <PixelFrame className="agent-card">
                   <Image
-                    src={`/agents/${agent.image}.webp`}
+                    src={`/agents/${agent.image}.png`}
                     alt={agent.name}
                     width={120}
                     height={120}
-                    className="mx-auto mb-6"
+                    className="mx-auto mb-6 bg-[#0a1219]"
                   />
                   <h3 className="agent-name">{agent.name}</h3>
                 </PixelFrame>
@@ -222,7 +235,7 @@ export default function Home() {
                 blue
               >
                 <Image
-                  src={`/agents/${member.image}.webp`}
+                  src={`/agents/${member.image}.png`}
                   alt={member.name}
                   width={120}
                   height={120}

@@ -93,7 +93,7 @@ p {
 
 
 .pixel-button {
-  @apply inline-block text-center font-pixel text-xs w-40 sm:w-44 sm:text-sm px-5 py-3 uppercase;
+  @apply inline-block text-center font-pixel text-xs w-36 sm:w-44 sm:text-sm px-3 sm:px-5 py-3 uppercase;
 
   border-radius: 12px;
   border: none;
